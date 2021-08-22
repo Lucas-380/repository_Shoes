@@ -1,0 +1,308 @@
+.carouselMod{
+    margin-top: 12vh;
+}
+
+.container_img{
+    margin-bottom: 0.5vh;
+    .img{
+        width: 15vh;
+        height: 15vh;
+    }
+}
+.img-main{
+    width: 61.5vh;
+    height: 61.5vh;
+    margin: 0 10vh 0 10vh;
+    z-index: 4;
+}
+
+.description-zap{
+    position:absolute;
+    left: 108vh;
+    z-index: 5;
+    h2{
+        color: black;
+        text-align: start;
+        margin: 1vh 0 1vh 0;
+        font-family: $font-fine;
+        font-size: 1.5rem;
+    }
+    h3{
+        color: black;
+        text-align: start;
+        margin: 1vh 0 1vh 0;
+        font-size: 2rem;
+    }
+    h4{
+        color: orangered;
+        text-align: start;
+        font-family: $font-fine;
+    }
+}
+.fondo{
+    background-color: $greyPlata;
+    border-radius: 5px;
+    height: 61.5vh;
+}
+
+.botonCarrito{
+    padding: .2rem;
+    border: solid black;
+    background-color: $white;
+    color: $greyDark;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 1rem;
+    position:relative;
+    width: 100%;
+    margin: 5vh 0 5vh 0;
+    transition: 0.3s;
+    &:hover{
+        transition: 0.3s;
+        border-color: black;  
+        color: $white;
+        background-color: $grey;
+    }
+}
+
+.btn_carrito-img{
+    background-repeat: no-repeat;
+    width: 6vh;
+    height: 6vh;
+    padding: 0.2rem;
+}
+.btn_carrito{
+    background-image: url(../images/svg/carrito.svg);
+    background-repeat: no-repeat;
+    width: 6vh;
+    height: 5.5vh;
+    top: 0.6rem;
+    padding: 0.2rem;
+    border: none;
+    background-color: $white;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    position: relative;
+    left: 3.5rem;
+    transform: scale(1, 1);
+    transition: 0.5s;
+    &:hover {
+        transform: scale(1.2 , 1.2);
+        transition: 0.5s;
+    }
+}
+.section__subtitle-zap{
+    background-color: $greyPlata;
+    margin: 5vh 8vh 5vh 7vh;
+}
+
+
+.description{
+    margin: 0 100vh 3vh 7vh;
+    background-color: $white;
+    width: 92%;
+    border: solid 5px $greyPlata;
+    h3{
+        text-align: start;
+        color:$greyDark;
+        margin: 2vh;
+        padding: 3vh 3vh 0 3vh;
+    }
+    p{
+        margin-left: 30vh;
+        margin-right: 30vh;
+    }
+    ol{
+        list-style: none;
+        text-decoration: none;
+        margin-left: 50vh;
+    }
+}
+
+
+@media (max-width: 576px){
+    .container_img{
+        display: inline;
+        margin-bottom: 1vh;
+        margin-right: 1vh ;
+        .img{
+            width: 11.5vh;
+            height: 11.5vh;
+        }
+        .m-sm{
+            margin: 2vh;
+        }
+    }
+    .description{
+        margin: 0;
+        background-color: $white;
+        width: 100%;
+        border: solid 5px $greyPlata;
+        h3{
+            margin: 0vh;
+            padding: 3vh;
+        }
+        p{
+            margin-left: 0vh;
+            margin-right: 0vh;
+        }
+        ol{
+            list-style: none;
+            text-decoration: none;
+            margin-left: 5vh;
+        }
+    }
+    .img-main{
+        margin: 0 2vh 2vh 2vh;
+        width: 51.5vh;
+        height: 51.5vh;
+        z-index: 0;
+    }
+
+    .description-zap{
+        position:relative;
+        left: 0;
+        margin-bottom: 5vh;
+        h2{
+            color: black;
+            text-align: start;
+            margin: 1vh 0 1vh 0;
+            font-family: $font-fine;
+            font-size: 1.5rem;
+        }
+        h3{
+            color: black;
+            text-align: start;
+            margin: 1vh 0 1vh 0;
+            font-size: 2rem;
+        }
+        h4{
+            color: orangered;
+            text-align: start;
+            font-family: $font-fine;
+        }
+    }
+}
+
+@media (min-width: 576px) and (max-width: 990px){
+    .container_img{
+        display: inline;
+        margin-bottom: 1vh;
+        margin-right: 1vh ;
+        .img{
+            width: 11.5vh;
+            height: 11.5vh;
+        }
+        .m-sm{
+            margin: 2vh;
+        }
+    }
+    .img-main{
+        margin: 0;
+        width: auto;
+        height: auto;
+    }
+    .description-zap{
+        position:relative;
+        left: 0;
+        margin: 0;
+    }
+    .fondo{
+        margin: 5vh;
+        width: auto;
+        height: auto;
+    }
+    .description{
+        margin: 0;
+        width: 100%;
+        h3{
+            margin: 0vh;
+            padding: 3vh;
+        }
+        p{
+            margin-left: 0vh;
+            margin-right: 0vh;
+        }
+        ol{
+            margin-left: 5vh;
+        }
+    }
+}
+
+//----------------------------------------FINALIZAR COMPRA----------------------------------------
+.img-finalizarCompra{
+    width: 152px;
+    height: 152px;
+    border-radius: 20px;
+}
+.modBtn-compra{
+    position:relative;
+    background-color:$greyDark;
+     color: $white;
+     padding: 0.1rem;
+     font-family: $font-fine;
+     height: 5vh;
+     width: 5vh;
+    margin-left: 1vh;
+    margin-top: 1vh;
+     &:hover{
+         background-color: $warning ;
+         transition: .5s;
+         color: $white;
+     }
+}
+
+.finalProductos{
+    justify-content:end;
+    padding-top: 1rem ;
+    width: 100%;
+}
+#cuentaProductos{
+    background-color: $white;
+    margin: 1vh 2vh 0 2vh;
+     border: solid 2px $greyDark;
+     border-radius: 1rem;
+}
+.cuentas{
+    font-size: 1.5rem;
+    font-family: $font-fine;
+    margin-top: 6vh;
+    p{ 
+        margin-left: 6vh;
+        text-align: start;
+        color: orangered;
+    }
+    .pago{
+        margin: 8vh 0vh 0vh 0vh;
+        text-align: center;
+        color: $greyDark;
+        background-color: $greyPlata;
+        border: solid round($number: 1px) $greyDark;
+    }
+}
+.btn-confirmacionCompra{
+    position:relative;
+    background-color:$greyDark;
+     color: $white;
+     padding: 0.1rem;
+     font-family: $font-fine;
+     margin: 4vh 0 2vh 10vh;
+     &:hover{
+         background-color: $success ;
+         transition: .5s;
+         color: $greyDark;
+     }
+}
+.btn-cancelarCompra{
+    position:relative;
+    background-color:$greyDark;
+     color: $white;
+     padding: 0.1rem;
+     font-family: $font-fine;
+    margin: 4vh 0 2vh 4vh;
+     &:hover{
+         background-color: $warning;
+         transition: .5s;
+         color: $white;
+     }
+}

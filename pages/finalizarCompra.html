@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Mi cuenta</title>
+	<meta name="description" content="¡Crea ahora tu cuenta para tener beneficios y ofertas exclusivas!">
+	<meta name="keywords" content="SHOES+, ZAPATILLAS,  CALZADO, DEPORTIVAS, TRAINING, RUNNING, OFERTAS, BENEFICIOS, PERFIL">
+
+	<link rel="shortcut icon" href="../images/svg/icono.ico">
+
+
+     <!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+	<header class="headerFijo"><nav class="navbar navbar-expand-lg navbar-dark">
+		<button class="navbar-toggler mb-5" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<a class="nav-link mx-3" id="header__logo" href="../index.html">S+</a>
+		
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		  	<ul class="navbar-nav mr-auto" id="header__nav--color">
+				<li class="nav-item">
+					<a class="nav-link" href="catalogo.html">Catalogo</a>
+				</li>
+				<li class="nav-item">
+			 		<a class="nav-link" href="compañia.html">Compañia</a>
+				</li>
+				<li class="nav-item">
+			  		<a class="nav-link admin" href="cuenta.html">Admin</a>
+				</li>
+		  	</ul>
+			<div>
+				<form class="form-inline">
+				  	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+				  	<button class="btn btn-outline-mod my-2 my-sm-0" type="submit">Buscar</button>
+				</form>
+			</div>
+		</div>
+		<!-- Button trigger modal -->
+	<button type="button" class="btn header__btn--background" data-toggle="modal" data-target="#exampleModal"></button>
+	
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Inicio de sesión</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<form>
+						<div class="form-group">
+						<label for="exampleInputEmail1">Email</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						<small id="emailHelp" class="form-text text-muted">Nunca compartiremos su correo electrónico con nadie más.</small>
+						</div>
+						<div class="form-group">
+						<label for="exampleInputPassword1">Contraseña</label>
+						<input type="password" class="form-control" id="exampleInputPassword1">
+						</div>
+						<button type="submit" class="btn modBtn">
+						<a class="nav-link helpModal" href="crearCuenta.html"> ¿No tiene una cuenta?</a>
+						</button>
+					</form>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn modBtn" data-dismiss="modal">Cancelar</button>
+					<button type="button" class="btn modBtn">Ingresar</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal final -->
+	</nav></header>  
+<!-- cierra nav -->
+<main>
+     <div class="container-fluid">
+          <div class="row container-titulos-panel">
+               <div class="col-lg-12">
+                    <h1 class="title-stock">Finalizar Compra</h1>
+               </div>
+          </div>
+<!--------------------------------------------------------LISTA-STOCK--------------------------------------------------------------------->
+		<div class="row" id="bg-panel">
+					<p class="encabezados col-lg-4 ml-5">Productos</p>
+					<p class="encabezados col-lg-1">Precio</p>
+					<p class="encabezados col-lg-2 ml-5">Cantidad</p>
+					<p class="encabezados col-lg-2">Cuenta</p>
+					<p class="encabezados col-lg-1"></p>
+		</div> 
+		<!------------------------------------------------------------------------------------------------------------------------------------>
+		<div class="row">
+			<div id="listaProductos" class="row col-lg-7 mx-4">
+				<!--ARCHIVOS JS-->
+			</div>
+			<div id="cuentaProductos" class="col-lg-4 productosLista">
+
+
+			</div>
+		</div>
+	</div>
+</main>
+
+<footer class="container-fluid">
+	<div class="row">
+		<div class="col-lg-2">
+			<ul>
+				<li class="footer__list"><a href="contacto.html">Contacto</a></li>
+				<li class="footer__list"><a href="contacto.html">Ayuda</a></li>
+				<li class="footer__list">+54 9 11 5337-4161</li>
+			</ul>	
+		</div>
+		<div class="col-lg-2">
+			<ul class="redes-sm my-4">
+				<li class="prueba">
+					<a class="redes" href="https://www.instagram.com/dure.ok/" target="_blank"><img src="../images/svg/instagram.svg" width="40px" height="40px" alt="logo-instagram"> Instagram</a>
+				</li>
+				<li class="prueba">
+					<a class="redes" href="https://www.facebook.com/" target="_blank"><img src="../images/svg/facebook.svg" width="40px" height="40px" alt="logo-facebook"> Facebook</a>
+				</li>
+				<li class="prueba">
+					<a class="redes" href="https://twitter.com/LucasD_380" target="_blank"><img src="../images/svg/twitter.svg" width="40px" height="40px" alt="logo-mastercard"> Twitter</a>
+				</li>
+			</ul>
+		</div>
+		<form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+			<label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
+				<div class="form-inline footer__form">
+					<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4">
+					<button type="submit" class="btn btn-outline-mod ml-1">SUSCRIBIRSE</button>
+				</div>
+		</form>
+		<div class="col-lg-4 col-md-6">
+			<p class="my-2 footer__text">COMPRA 100% SEGURA</p>
+			<p class="my-2 footer__text">NUESTRO SITIO POSEE TODA LA SEGURIDAD PARA TU COMPRA.</p>
+			<p class="my-2 footer__text">PAGO 100% SEGURO</p>
+			<ul class="justify-content-center d-flex">
+				<li>
+					<a href="https://www.paypal.com" target="_blank"><img class="paypal-ico" src="../images/svg/paypal.svg" alt="logo-paypal"></a>
+				</li>
+				<li>
+					<a href="https://www.visa.com.ar" target="_blank"><img class="visa-ico" src="../images/svg/visa.svg" alt="logo-visa"></a>
+				</li>
+				<li>
+					<a href="https://www.mastercard.com.ar" target="_blank"><img class="mastercard-ico" src="../images/svg/mastercard.svg" alt="logo-mastercard"></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</footer>
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/class.js"></script>
+<script src="../js/function.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../js/finalizarCompra.js"></script>
+</body>
+</html>

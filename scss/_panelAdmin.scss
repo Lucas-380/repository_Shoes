@@ -1,0 +1,55 @@
+.container-titulos-panel{
+     margin-top: 1vh;
+     background-color: rgba(131, 131, 131, 0.281);
+     .title-stock{
+          font-size: 10vh;
+          color: $white;
+     }
+     .btn-panel{
+          margin-top: 3.5vh;
+          margin-left: 5vh;
+          text-align: center;
+     }
+}
+#bg-panel{
+     background-color: $greyPlata;
+     margin: 1vh 2vh 0 2vh;
+     border: solid 2px $greyDark;
+     border-radius: 1rem;
+     .encabezados{
+          justify-content: start;
+          font-family: $font-panel;
+          font-size: 1.2rem;
+          color: $titulos;
+          margin-top: 2vh;
+     }
+}
+#listaProductos{
+     background-color: $white;
+     margin: 1vh 2vh 0 2vh;
+     border: solid 2px $greyDark;
+     border-radius: 1rem;
+     .productosLista{
+          justify-content:start;
+          padding: 0.4rem ;
+          p{
+               font-family: $font-panel;
+               font-size: 1rem;
+               color: $greyDark;
+               text-align:start;
+               border-bottom: solid 1px rgba(0, 0, 0, 0.144);
+               margin-bottom: 0;
+          }
+     }
+}
+.modBtn-editar{
+     background-color:$greyDark;
+     color: $white !important;
+     padding: 0.1rem;
+     font-family: $font-fine;
+     &:hover{
+         background-color: $warning ;
+         transition: .5s;
+         color: $white;
+     }
+}

@@ -1,0 +1,128 @@
+footer{
+    background-color: $grey ;
+    position: relative;
+    bottom: -15vh;
+    li{
+        list-style: none;
+        a{
+            text-decoration: none;
+            transition: 0.5s;
+            color: $white;
+            font-size: 1.5rem;
+            &:hover{
+                text-decoration: none;
+                transition: 0.5s;
+                color: $greyLight;
+            }   
+        }
+    }
+}
+
+@each $icono in instagram, facebook, twitter, paypal, visa, mastercard{
+    .#{$icono}-ico{
+        background-image: url(../images/svg/#{$icono}.svg);
+        width: 5vh;
+        background-repeat: no-repeat;
+        margin-left: 0.5rem;
+        list-style: none;
+    }
+}
+
+@each $icono in paypal, visa, mastercard{
+    .#{$icono}-ico{
+        &:hover{
+            transition:0.8s;
+            transform: rotateY(360deg);
+        }
+    }
+    .mastercard-ico{ 
+        width: 8vh;
+    }
+}
+.footer__text{
+    color:$greyLight;
+    text-align: center;
+    font-size: 0.9rem;
+}
+.footer__list{
+    margin-top: 1rem;
+    text-align: center;
+    color: $greyLight;
+}
+
+.redes{
+    visibility: hidden;
+    color: $grey;
+    font-family: $font-general;
+        img{
+            visibility: visible;
+        }
+    &:hover{
+        visibility: visible;
+        transition: 0.5s;
+        color: $white;
+    }
+}
+
+
+.footer__form{
+    width: 100%;
+    justify-content: center;
+    
+}
+.footer__separador{
+    border-right: solid 3px $white;
+    border-left: solid 3px $white;
+    margin: 4vh 0;
+}
+
+
+@media (max-width: 576px){
+    .footer__list{
+        margin-top: 0.5rem;
+        justify-content: center;
+        display: flex;
+    }
+    .redes-sm{
+        margin-left: 6vh ;
+        display: flex;
+        justify-content: center;
+    }
+    .redes{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .btn-outline-mod{
+        margin: 2vh 0 5vh 0;
+    }
+    .footer__form{
+        border: solid 3px black;
+        border-radius: 10px;
+    }
+    .footer__separador{
+        margin: 0vh 0;
+        border: hidden;
+    }
+}
+
+
+@media (min-width: 576px) and (max-width: 990px){
+    .footer__list{
+        margin-top: 0.5rem;
+        justify-content: center;
+        display: flex;
+    }
+    .redes-sm{
+        margin-left: 6vh ;
+        display: flex;
+        justify-content: center;
+    }
+    .redes{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .footer__separador{
+        border-left: hidden;
+    }
+}
+
