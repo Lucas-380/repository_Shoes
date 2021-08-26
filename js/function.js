@@ -1,4 +1,4 @@
-// Genearacion de interfaz de productos
+//---------Genearacion de interfaz de productos
 function productosUI(productos, id){
      $(id).empty();
      for (const producto of productos){
@@ -18,17 +18,8 @@ function productosUI(productos, id){
      }
 }
 
-function seleccionProducto(e) {
-     toastr.warning('Intente añadiendo el producto al carrito' , 'Página en mantenimiento' , {
-          "closeButton": true,
-          "progressBar": true,
-          "showDuration": "3",
-          "hideDuration": "1",
-          "timeOut": "3000",
-          "positionClass": "toast-bottom-right",
-     });
-}
 
+//--------------------Compra del producto
 function comprarProducto(e){
      e.preventDefault();
      const idProducto   = e.target.id;
@@ -44,6 +35,7 @@ function comprarProducto(e){
      notificacionAdd();
 }
 
+//--------------------------Funciones del carrito
 function carritoInterfaz(productos){
      $('#carritoCantidad').html(productos.length);
      $('#carritoProductos').empty();
@@ -56,34 +48,39 @@ function carritoInterfaz(productos){
 }
 
 function registroCarrito(producto){
-     console.log(producto);
-     return              `<div class="productos-menu row mb-2">
-     <img class="img-carrito rounded" src="${producto.image}" alt="${producto.image}">
-     <div class="ml-2">
-     <p> ${producto.nombre}
-     <div>
-     <span class="badge badge-warning">$ ${producto.precio}</span>
-     <span class="badge badge-dark">${producto.cantidad}</span>
-     <span class="badge badge-success"> $ ${subtotal(producto)}</span>
-     <a id="${producto.id}" class="btn btn-info btn-add modBtn-editar ml-3 px-2 py-0">+</a>
-     <a id="${producto.id}" class="btn btn-warning btn-sub modBtn-editar px-2 py-0">-</a>
-     <a id="${producto.id}" class="btn btn-danger btnEliminar modBtn-editar px-2 py-0">x</a>
-     </div>
-     </p>
-     </div>
-     </div>
-     <hr>
+     return`            <div class="productos-menu row mb-2">
+                                <img class="img-carrito rounded" src="${producto.image}" alt="${producto.image}">
+                                <div class="ml-2">
+                                    <p> ${producto.nombre}
+                                        <div>
+                                            <span class="badge badge-warning">$ ${producto.precio}</span>
+                                            <span class="badge badge-dark">${producto.cantidad}</span>
+                                            <span class="badge badge-success"> $ ${subtotal(producto)}</span>
+                                            <a id="${producto.id}" class="btn btn-info btn-add modBtn-editar ml-3 px-2 py-0">+</a>
+                                            <a id="${producto.id}" class="btn btn-warning btn-sub modBtn-editar px-2 py-0">-</a>
+                                            <a id="${producto.id}" class="btn btn-danger btnEliminar modBtn-editar px-2 py-0">x</a>
+                                        </div>
+                                    </p>
+                                </div>
+                            </div>
+                            <hr>
      `
 }
 
-//--------------------------
+$('.toggle-btn').click(sidebar);
+function sidebar(){
+    $('#sidebar').toggleClass('active');
+}
+
 function agregarCantidad(valor, producto) {
      producto.cantidad += valor;
 }
 function subtotal(producto){
      return producto.cantidad * producto.precio;
 }
-//--------------------------
+
+
+
 function eliminarCarrito(e){
      carrito = carrito.filter(producto => producto.id != e.target.id);
      carritoInterfaz(carrito);
@@ -103,15 +100,17 @@ function addCantidad(){
 }
 
 function subCantidad(){
-     let producto = carrito.find(p => p.id == this.id);
-     if(producto.cantidad > 1){
-       agregarCantidad(-1, producto);
+    let producto = carrito.find(p => p.id == this.id);
+    if(producto.cantidad > 1){
+        agregarCantidad(-1, producto);
        $(this).parent().children()[1].innerHTML = producto.cantidad;
        $(this).parent().children()[2].innerHTML = subtotal(producto);
        localStorage.setItem("carrito",JSON.stringify(carrito));
-     }
-   }
+    }
+}
 
+
+//----------------------Notificaciones
 function notificacionAdd() {
      toastr.success('El producto se ha añadido al carrito' , 'S h o e s +' , {
           "closeButton": true,
@@ -119,6 +118,7 @@ function notificacionAdd() {
           "showDuration": "3",
           "hideDuration": "1",
           "timeOut": "3000",
+          "positionClass": "toast-top-center",
      });
 }
 
@@ -129,5 +129,17 @@ function notificacionEliminar() {
           "showDuration": "3",
           "hideDuration": "1",
           "timeOut": "3000",
+          "positionClass": "toast-top-center",
      });
+}
+
+function seleccionProducto(e) {
+    toastr.warning('Intente añadiendo el producto al carrito' , 'Página en mantenimiento' , {
+         "closeButton": true,
+         "progressBar": true,
+         "showDuration": "3",
+         "hideDuration": "1",
+         "timeOut": "3000",
+         "positionClass": "toast-top-center",
+    });
 }

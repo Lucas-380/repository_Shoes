@@ -18,7 +18,7 @@ $font-panel: "Hind Siliguri", sans-serif;
 @import "_header";
 @import "_footer";
 @import "_form";
-@import "_error";
+
 @import "_productoShoes";
 @import "_panelAdmin";
 
@@ -191,4 +191,30 @@ $width: (
   font-size: 1.5rem;
   color: $white;
   margin: 0 1rem 0 1rem; 
+}
+
+//---------------------------------------sidebar
+#sidebar{
+    z-index: 2000;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    background: rgba(19, 19, 19, 0.952); ;
+    right: 0;
+    transition: all 500ms linear;
+    p{
+        color: $white;
+    }
+    &.active{
+        right: -320px;
+    }
+    .fondo-btn-carro{
+        position: absolute;
+        border-radius: 50px;
+        width: 10vh;
+        height: 10vh;
+        right: 330px;
+        top: 10px;
+        cursor: pointer;
+    }
 }

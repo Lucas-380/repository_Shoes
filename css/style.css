@@ -366,48 +366,6 @@ footer li a:hover {
     text-align: center;
   }
 }
-.error404 {
-  position: relative;
-  margin: 10vh 0 0 0;
-  width: 90vh;
-  height: 70vh;
-}
-
-.bg-error {
-  background: #141414;
-}
-
-.title--error404 {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #141414;
-  margin: 5vh 5vh 0vh 5vh;
-  font-family: "Bebas Neue", cursive;
-}
-
-.inicio {
-  font-family: "Permanent Marker", cursive;
-  font-size: 6rem;
-  margin: 8rem;
-  color: #1b1b1b;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border: solid #141414;
-  border-radius: 3%;
-}
-.inicio:hover {
-  text-decoration: none;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  color: #dbdbdb;
-  font-size: 6.5rem;
-  margin-top: 2rem;
-}
-
-.hola {
-  color: red;
-}
-
 .carouselMod {
   margin-top: 12vh;
 }
@@ -675,6 +633,10 @@ footer li a:hover {
   color: #dbdbdb;
 }
 
+.form-infoCliente {
+  margin: 3vh;
+}
+
 .finalProductos {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
@@ -736,6 +698,10 @@ footer li a:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   color: #dbdbdb;
+}
+
+.form-control {
+  font-family: "Roboto", sans-serif;
 }
 
 .container-titulos-panel {
@@ -1013,4 +979,30 @@ body {
   font-size: 1.5rem;
   color: #dbdbdb;
   margin: 0 1rem 0 1rem;
+}
+
+#sidebar {
+  z-index: 2000;
+  position: fixed;
+  width: 320px;
+  height: 100%;
+  background: rgba(19, 19, 19, 0.952);
+  right: 0;
+  -webkit-transition: all 500ms linear;
+  transition: all 500ms linear;
+}
+#sidebar p {
+  color: #dbdbdb;
+}
+#sidebar.active {
+  right: -320px;
+}
+#sidebar .fondo-btn-carro {
+  position: absolute;
+  border-radius: 50px;
+  width: 10vh;
+  height: 10vh;
+  right: 330px;
+  top: 10px;
+  cursor: pointer;
 }

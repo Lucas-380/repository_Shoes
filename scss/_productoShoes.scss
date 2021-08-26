@@ -251,7 +251,9 @@
          color: $white;
      }
 }
-
+.form-infoCliente{
+    margin: 3vh;
+}
 .finalProductos{
     justify-content:end;
     padding-top: 1rem ;
@@ -260,8 +262,8 @@
 #cuentaProductos{
     background-color: $white;
     margin: 1vh 2vh 0 2vh;
-     border: solid 2px $greyDark;
-     border-radius: 1rem;
+    border: solid 2px $greyDark;
+    border-radius: 1rem;
 }
 .cuentas{
     font-size: 1.5rem;
@@ -305,4 +307,7 @@
          transition: .5s;
          color: $white;
      }
+}
+.form-control{
+    font-family: $font-fine
 }
