@@ -230,78 +230,91 @@
 }
 
 //----------------------------------------FINALIZAR COMPRA----------------------------------------
-.img-finalizarCompra{
-    width: 152px;
-    height: 152px;
-    border-radius: 20px;
+.sub{
+    position: relative;
+    margin-left: 22vh;
 }
-.modBtn-compra{
+#listaFinalizarCompra{
+    margin: 1vh 2vh 1vh 2vh;
+}
+
+@mixin boton{
     position:relative;
-    background-color:$greyDark;
-     color: $white;
+    background-color:$white;
+     color: $greyDark;
      padding: 0.1rem;
      font-family: $font-fine;
      height: 5vh;
      width: 5vh;
     margin-left: 1vh;
     margin-top: 1vh;
+}
+
+.img-finalizarCompra{
+    width: 152px;
+    height: 152px;
+    border-radius: 20px;
+}
+.modBtn-compra{
+    @include boton;
      &:hover{
-         background-color: $warning ;
+         background-color: $warning;
          transition: .5s;
          color: $white;
-     }
+    }
 }
+
 .form-infoCliente{
     margin: 3vh;
 }
 .finalProductos{
     justify-content:end;
     padding-top: 1rem ;
+    padding-bottom: 1rem ;
     width: 100%;
-}
-#cuentaProductos{
-    background-color: $white;
-    margin: 1vh 2vh 0 2vh;
-    border: solid 2px $greyDark;
-    border-radius: 1rem;
+    p{
+        font-size: 1.5rem;
+        color: $white;
+    }
 }
 .cuentas{
-    font-size: 1.5rem;
-    font-family: $font-fine;
+    font-size: 1.7rem;
+    font-family: $font-panel;
     margin-top: 6vh;
+    margin-left: 6vh;
     p{ 
-        margin-left: 6vh;
         text-align: start;
-        color: orangered;
+        color: $white;
     }
     .pago{
-        margin: 8vh 0vh 0vh 0vh;
+        border: solid 1px $success;
         text-align: center;
-        color: $greyDark;
-        background-color: $greyPlata;
-        border: solid round($number: 1px) $greyDark;
     }
 }
-.btn-confirmacionCompra{
-    position:relative;
-    background-color:$greyDark;
-     color: $white;
-     padding: 0.1rem;
-     font-family: $font-fine;
-     margin: 4vh 0 2vh 10vh;
+.btn-success{
+    float:right;
+    background-color:$white;
+     color: $greyDark;
+     padding: 0.5rem;
+     font-family: $font-panel;
+     font-size: 1.5rem;
+     margin: 3rem 0.5rem 1.8rem 0.5rem;
+     border: none;
      &:hover{
          background-color: $success ;
          transition: .5s;
          color: $greyDark;
      }
 }
-.btn-cancelarCompra{
-    position:relative;
-    background-color:$greyDark;
-     color: $white;
-     padding: 0.1rem;
-     font-family: $font-fine;
-    margin: 4vh 0 2vh 4vh;
+.btn-danger{
+    float:right;
+    background-color:$white;
+     color: $greyDark;
+     padding: 0.5rem;
+     font-family: $font-panel;
+     font-size: 1.5rem;
+     margin: 0.5rem;
+     border: none;
      &:hover{
          background-color: $warning;
          transition: .5s;
@@ -310,4 +323,26 @@
 }
 .form-control{
     font-family: $font-fine
+}
+
+.btn-add{
+    @include boton;
+    border: solid 0.3vh $success;
+    margin-top: 0;
+    &:hover{
+        background-color: $success ;
+        transition: .5s;
+        color: $greyDark
+    }
+}
+
+.btn-sub{
+    @include boton;
+    border: solid 0.3vh $warning;
+    margin-top: 0;
+    &:hover{
+        background-color: $warning;
+        transition: .5s;
+        color: $greyDark
+    }
 }

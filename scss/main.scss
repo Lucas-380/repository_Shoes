@@ -164,35 +164,6 @@ $width: (
   }
 }
 
-/*----------------------------------------------------------------------------style dropmenu js----------------------*/
-.dropdown-menu {
-  background-color: #8b8b8b;
-  border: solid 1px #141414;
-}
-.productos-menu {
-  color: #141414;
-  font-size: 1rem;
-}
-.div__dropdown {
-  margin-right: 50px;
-}
-.btn-drop {
-  width: 305px;
-  position: absolute;
-}
-.img-carrito {
-  margin-left: 1.5em;
-  width: 80px;
-  height: 80px;
-  border: solid #141414 2px;
-}
-.text{
-  font-family: $font-general;
-  font-size: 1.5rem;
-  color: $white;
-  margin: 0 1rem 0 1rem; 
-}
-
 //---------------------------------------sidebar
 #sidebar{
     z-index: 2000;
@@ -202,8 +173,19 @@ $width: (
     background: rgba(19, 19, 19, 0.952); ;
     right: 0;
     transition: all 500ms linear;
+    .img-carrito {
+      margin-left: 1.5em;
+      width: 80px;
+      height: 80px;
+      border: solid #141414 2px;
+    }
     p{
+        font-size: 1.5rem;
         color: $white;
+    }
+    .precioCarrito{
+        font-size: 1.3rem;
+        color: $success;       
     }
     &.active{
         right: -320px;
@@ -217,4 +199,24 @@ $width: (
         top: 10px;
         cursor: pointer;
     }
+}
+.btnX-carrito{
+    position: relative;
+    margin-left: 15vh;
+}
+#botonFinalizarCompra{
+    position:absolute;
+    margin-left: 17vh;
+    margin-top: 3vh;
+}
+.footerCarrito{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(19, 19, 19);
+}
+#carritoProductos{
+    height: 69%;
+    overflow-y: auto;
+    overflow-x: hidden;
 }

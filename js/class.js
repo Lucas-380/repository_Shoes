@@ -1,7 +1,7 @@
 class Zapatilla {
      constructor(id, nombre, precio, image, cantidad) {
           this.id = parseInt(id);
-          this.nombre = nombre;
+          this.nombre = nombre.toUpperCase();
           this.precio = parseFloat(precio);
           this.image = image;
           this.cantidad = cantidad || 1;
