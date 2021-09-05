@@ -758,6 +758,25 @@ footer li a:hover {
   color: #141414;
 }
 
+#btn-continuar {
+  position: relative;
+  background-color: #dbdbdb;
+  color: #141414;
+  padding: 0.5rem;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 5vh;
+  border: solid 0.3vh #1b1b1b;
+  height: 12.5vh;
+  width: 50%;
+  margin-left: 320px;
+}
+#btn-continuar:hover {
+  background-color: #5ed65e;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  color: #141414;
+}
+
 .container-titulos-panel {
   margin-top: 1vh;
   background-color: rgba(131, 131, 131, 0.281);
@@ -1060,4 +1079,18 @@ body {
   height: 69%;
   overflow-y: auto;
   overflow-x: hidden;
+}
+
+.container-titulos-catalogo .title-stock {
+  margin-top: 3vh;
+  font-size: 6vh;
+  color: #dbdbdb;
+}
+.container-titulos-catalogo .btn-panel {
+  margin-top: 3.5vh;
+  margin-left: 5vh;
+  text-align: center;
+}
+.container-titulos-catalogo .click {
+  cursor: pointer;
 }

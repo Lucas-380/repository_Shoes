@@ -1,9 +1,8 @@
 $(document).ready(function () {
     if ('nuevosProductos' in localStorage) {
         productosRegistrados = JSON.parse(localStorage.getItem("nuevosProductos"));
-    } else {
-        lista(catalogo);
     }
+    $('.b-delete').click(ocultarProducto);
 });
 
 const URLGET = "../DATA.json";
@@ -28,12 +27,11 @@ $('#registroProductos').submit(function () {
 function lista(catalogo) {
     for (const producto of catalogo) {
         $('#listaProductos').append(`
-                                                  <div class=" row productosLista">
-                                                  <p class="col-lg-1">${producto.id}</p>
-                                                  <p class="col-lg-4">${producto.nombre}</p>
+        <div class=" row productosLista">
+        <p class="col-lg-1">${producto.id}</p>
+        <p class="col-lg-4">${producto.nombre}</p>
                                                        <p class="col-lg-3">${producto.precio} $ARS</p>
                                                        <p class="col-lg-3">${producto.cantidad}</p>
-                                                       <button id="${producto.id}" type="button" class="btn modBtn-editar b-delete">Eliminar</button>
                                                        </div>
                                                        `)
     }

@@ -8,11 +8,6 @@
 	<meta name="keywords" content="SHOES+, ZAPATILLAS,  CALZADO, DEPORTIVAS, TRAINING, RUNNING, OFERTAS, BENEFICIOS, PERFIL">
 
 	<link rel="shortcut icon" href="../images/svg/icono.ico">
-	<link rel="stylesheet" href="../css/animate.css">
-		<script src="../js/wow.min.js"></script>
-        <script>
-			new WOW().init();
-			</script>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -38,10 +33,6 @@
 				</li>
 		  	</ul>
 			<div>
-				<form class="form-inline">
-				  	<input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-				  	<button class="btn btn-outline-mod my-2 my-sm-0" type="submit">Buscar</button>
-				</form>
 			</div>
 		</div>
 		<!-- Button trigger modal -->
@@ -86,68 +77,69 @@
 <main>
 
 <div class="container-fluid row justify-content-center">
-	<form class="col-12 col-lg-6 col-md-6  bg-form wow slideInRight" action="#" method="post">
-		<fieldset class="form__fieldset--caracteristicas">
-			<legend class="fieldset__title">Registro de sesión</legend>
-			<div class="form-row">
-		  		<div class="form-group col-md-6">
-					<input type="text" class="form-control" placeholder="Nombre">
-			  	</div>
-		  		<div class="form-group col-md-6">
-					<input type="text" class="form-control" placeholder="Apellido">
-		 		</div>
-			</div>
 
-			<form>
-				<div class="form-row">
-				  	<div class="form-group col-md-6">
-						<label for="inputEmail4">Email</label>
-						<input type="email" class="form-control" id="inputEmail4">
-				  	</div>
-				  	<div class="form-group col-md-6">
-						<label for="inputPassword4">Contraseña</label>
-						<input type="password" class="form-control" id="inputPassword4">
-				  	</div>
-				</div>
-				<div class="form-row">
-					<div class="form-group col-6">
-					<label for="inputAddress">Calle 1</label>
-					<input type="text" class="form-control" id="inputAddress" placeholder="Calle falsa, 123">
-					</div>
-					<div class="form-group col-6">
-					<label for="inputAddress2">Calle 2</label>
-					<input type="text" class="form-control" id="inputAddress2" placeholder="Fake Street, 123">
-					</div>
-				</div>
-				<div class="form-row">
-				  	<div class="form-group col-md-6">
-						<label for="inputCity">Ciudad</label>
-						<input type="text" class="form-control" id="inputCity">
-				  	</div>
-				  	<div class="form-group col-md-4">
-						<label for="inputState">Estado</label>
-						<select id="inputState" class="form-control">
-					  		<option selected>CABA</option>
-					  		<option>otro...</option>
-						</select>
-				  	</div>
-				  	<div class="form-group col-md-2">
-						<label for="inputZip">Cod.Postal</label>
-						<input type="text" class="form-control" id="inputZip">
-				  	</div>
-				</div>
-				<div class="form-group">
-					<div class="form-check">
-						<input class="form-check-input mt-3" type="checkbox" id="gridCheck">
-							<label class="form-check-label" for="gridCheck">
-								¿Acepta terminos y condiciones?
-							</label>
-					</div>
-				</div>
-				<button type="submit" class="btn modBtn">Registrarse</button>
-			</form>				
-		</fieldset>
-	</form>
+		<form  id="form-crearCuenta" class="col-12 col-lg-6 col-md-6  bg-form" method="post">
+            <fieldset class="form__fieldset--caracteristicas">
+                <legend class="fieldset__title">Registro de sesión</legend>
+                <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Nombre" required>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <input type="text" class="form-control" placeholder="Apellido" required>
+                     </div>
+                </div>
+                <form>
+                    <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" required>
+                          </div>
+                          <div class="form-group col-md-6">
+                            <label for="inputPassword4">Contraseña</label>
+                            <input type="password" class="form-control" required>
+                          </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-6">
+                        <label for="inputAddress">Calle 1</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="Calle falsa, 123" required>
+                        </div>
+                        <div class="form-group col-6">
+                        <label for="inputAddress2">Calle 2</label>
+                        <input type="text" class="form-control" id="inputAddress2" placeholder="Fake Street, 123" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                          <div class="form-group col-md-6">
+                            <label for="inputCity">Ciudad</label>
+                            <input type="text" class="form-control" id="inputCity" required>
+                          </div>
+                          <div class="form-group col-md-4">
+                            <label for="inputState">Estado</label>
+                            <select id="inputState" class="form-control">
+                                  <option selected>CABA</option>
+                                  <option>otro...</option>
+                            </select>
+                          </div>
+                          <div class="form-group col-md-2">
+                            <label for="inputZip">Cod.Postal</label>
+                            <input type="text" class="form-control" id="inputZip" required>
+                          </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-check">
+                            <input class="form-check-input mt-3" type="checkbox" id="gridCheck" required>
+                                <label class="form-check-label" for="gridCheck">
+                                    ¿Acepta terminos y condiciones?
+                                </label>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn modBtn">Registrarse</button>
+                </form>
+            </fieldset>
+        </form>
+
 </div>
 </main>
 
@@ -173,13 +165,13 @@
 				</li>
 			</ul>
 		</div>
-		<form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
-			<label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
-				<div class="form-inline footer__form">
-					<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4">
-					<button type="submit" class="btn btn-outline-mod ml-1">SUSCRIBIRSE</button>
-				</div>
-		</form>
+		<form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+            <label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
+                <div class="form-inline footer__form">
+                        <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
+                        <input type="submit" class="btn btn-outline-mod ml-1"></input>
+            </div>
+        </form>
 		<div class="col-lg-4 col-md-6">
 			<p class="my-2 footer__text">COMPRA 100% SEGURA</p>
 			<p class="my-2 footer__text">NUESTRO SITIO POSEE TODA LA SEGURIDAD PARA TU COMPRA.</p>
@@ -200,8 +192,12 @@
 </footer>
 
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../js/forms.js"></script>
 </body>
 </html>

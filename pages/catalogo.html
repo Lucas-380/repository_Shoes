@@ -43,11 +43,9 @@
                         <a class="nav-link admin" href="cuenta.html">Admin</a>
                     </li>
                 </ul>
-                <div>
-                    <form class="form-inline">
-                        <input id="busquedaProducto" class="form-control mr-sm-2" type="search" placeholder="Search">
-                    </form>
-                </div>
+
+                
+                
             </div>
             <!-- Button trigger modal -->
             <button type="button" class="btn header__btn--background" data-toggle="modal"
@@ -149,8 +147,47 @@
         <!--------------------------------------Final-Carousel--------------------------------------------->
         <div class="container-fluid" id="divMain">
             <h2 id="title" class="main__title mb-5 opacity">Lo más vendido</h2>
+            <hr>
+            <!-- ------------------------------------------------------------------------------------------- -->
+            <div class="row container-titulos-catalogo">
+                <div class="col-lg-4">
+                    <h5 class="title-stock ml-5">Nuestros productos</h5>
+                </div>
+                    <div class="input-group col-lg-5 ml-5 mb-4 click">
+                        <form class="form-inline btn-panel">
+                        <div class="input-group-prepend">
+                          <span class="input-group-text">Buscar</span>
+                        </div>
+                        <input id="busquedaProducto" class="form-control" placeholder="Search">
+                    </form>
+                    </div>
+
+                <div class="col-lg-2">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Min</span>
+                        </div>
+                        <input type="number" class="form-control inputPrecio" id="minProducto" value="1">
+                        <div class="input-group-append">
+                            <span class="input-group-text">$</span>
+                        </div>
+                    </div>
+                    <div class="input-group mt-2">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">Max</span>
+                        </div>
+                        <input type="number" class="form-control inputPrecio" id="maxProducto" value="20000">
+                        <div class="input-group-append">
+                            <span class="input-group-text">$</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- ------------------------------------------------------------------------------------------- -->
+            <hr>
             <section id="article" class="row m-5">
-                <!-- -----------------------------ARCHIVOS--JS------------------------------>
+                <!--------------------------------ARCHIVOS--JS------------------------------>
             </section>
         </div>
     </main>
@@ -183,17 +220,13 @@
                     </li>
                 </ul>
             </div>
-            <form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
-                <label class="footer__form" for="inputEmail4">
-                    <h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3>
-                </label>
-                <div class="form-inline footer__form">
-                    <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" />
-                    <button type="submit" class="btn btn-outline-mod ml-1">
-                        SUSCRIBIRSE
-                    </button>
-                </div>
-            </form>
+            <form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+				<label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
+					<div class="form-inline footer__form">
+					  		<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
+							<input type="submit" class="btn btn-outline-mod ml-1"></input>
+				</div>
+			</form>
             <div class="col-lg-4 col-md-6">
                 <p class="my-2 footer__text">COMPRA 100% SEGURA</p>
                 <p class="my-2 footer__text">
@@ -225,11 +258,12 @@
     </script>
     <!--ARCHIVOS JS PARA NOTIFICACIONES-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/global.js"></script>
     <script src="../js/class.js"></script>
     <script src="../js/function.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/forms.js"></script>
 </body>
 
 </html>

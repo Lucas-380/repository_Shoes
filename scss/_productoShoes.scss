@@ -346,3 +346,20 @@
         color: $greyDark
     }
 }
+#btn-continuar{
+    position:relative;
+    background-color:$white;
+    color: $greyDark;
+    padding: 0.5rem;
+    font-family: $font-panel;
+    font-size: 5vh;
+    border: solid 0.3vh $grey;
+    height: 12.5vh;
+    width: 50%;
+    margin-left: 320px;
+    &:hover{
+        background-color: $success ;
+        transition: .5s;
+        color: $greyDark
+    }
+}

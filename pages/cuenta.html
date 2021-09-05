@@ -41,10 +41,6 @@
                     </li>
                 </ul>
                 <div>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-mod my-2 my-sm-0" type="submit">Buscar</button>
-                    </form>
                 </div>
             </div>
             <!-- Button trigger modal -->
@@ -94,20 +90,14 @@
     <main>
         <div class="container-fluid">
             <div class="row container-titulos-panel">
-                <div class="col-lg-2">
+                <div class="col-lg-4">
                     <h1 class="title-stock">stock</h1>
                 </div>
-                <div class="col-lg-2">
-                    <button class="btn btn-outline-mod btn-panel" type="submit">Ordenar</button>
-                </div>
-                <div class="col-lg-4">
+                <div class="col-lg-6">
                     <form class="form-inline btn-panel">
                         <input class="form-control" type="search" placeholder="buscar prod." aria-label="Search">
                         <button class="btn btn-outline-mod ml-1" type="submit">Buscar</button>
                     </form>
-                </div>
-                <div class="col-lg-2">
-                    <button type="button" class="btn btn-outline-mod btn-panel">General</button>
                 </div>
                 <div class="col-lg-2">
 
@@ -155,7 +145,6 @@
                 <p class="encabezados col-lg-4">PRODUCTO</p>
                 <p class="encabezados col-lg-3">PRECIO</p>
                 <p class="encabezados col-lg-3">CANTIDAD</p>
-                <p class="encabezados col-lg-1">EDITAR</p>
             </div>
             <!------------------------------------------------------------------------------------------------------------------------------------>
             <div id="listaProductos" class="">
@@ -191,13 +180,11 @@
                     </li>
                 </ul>
             </div>
-            <form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
-                <label class="footer__form" for="inputEmail4">
-                    <h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3>
-                </label>
-                <div class="form-inline footer__form">
-                    <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4">
-                    <button type="submit" class="btn btn-outline-mod ml-1">SUSCRIBIRSE</button>
+            <form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+                <label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
+                    <div class="form-inline footer__form">
+                            <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
+                            <input type="submit" class="btn btn-outline-mod ml-1"></input>
                 </div>
             </form>
             <div class="col-lg-4 col-md-6">
@@ -223,19 +210,22 @@
     </footer>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
-    <script src="../js/global.js"></script>
-    <script src="../js/class.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/function.js"></script>
-    <script src="../js/panelAdmin.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+<script src="../js/global.js"></script>
+<script src="../js/class.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/function.js"></script>
+<script src="../js/panelAdmin.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="../js/forms.js"></script>
 </body>
 
 </html>

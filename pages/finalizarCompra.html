@@ -40,12 +40,7 @@
                     </li>
                 </ul>
                 <div>
-                    <form class="form-inline">
-                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button class="btn btn-outline-mod my-2 my-sm-0" type="submit">
-                            Buscar
-                        </button>
-                    </form>
+                    
                 </div>
             </div>
             <!-- Button trigger modal -->
@@ -160,15 +155,11 @@
                     </li>
                 </ul>
             </div>
-            <form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
-                <label class="footer__form" for="inputEmail4">
-                    <h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3>
-                </label>
-                <div class="form-inline footer__form">
-                    <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" />
-                    <button type="submit" class="btn btn-outline-mod ml-1">
-                        SUSCRIBIRSE
-                    </button>
+            <form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+                <label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
+                    <div class="form-inline footer__form">
+                            <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
+                            <input type="submit" class="btn btn-outline-mod ml-1"></input>
                 </div>
             </form>
             <div class="col-lg-4 col-md-6">
@@ -211,6 +202,7 @@
     <script src="../js/function.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="../js/finalizarCompra.js"></script>
+    <script src="../js/forms.js"></script>
 </body>
 
 </html>

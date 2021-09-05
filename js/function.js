@@ -2,8 +2,8 @@
 function productosUI(productos, id) {
     $(id).empty();
     for (const producto of productos) {
-        $(id).append(`   <article class="col-lg-3 col-md-6 mb-5 cat__img">
-                                                            <div class="card cardMod" style="width: 15rem;">
+        $(id).append(`   <article id="prod" class="col-lg-3 col-md-6 mb-5 cat__img">
+                                                            <div id="${producto.id} "class="card cardMod" style="width: 15rem;">
                                                             <img src="${producto.image}" alt="${producto.image}">
                                                                  <div class="card-body">
                                                                       <p class="card-text">ZAPATILLAS ${producto.nombre}</p>
@@ -25,30 +25,26 @@ function comprarProducto(e) {
     const añadido = carrito.find(p => p.id == idProducto);
     if (añadido == undefined) {
         carrito.push(catalogo.find(p => p.id == idProducto));
+        notificacionAdd();
     } else {
-        agregarCantidad(1, añadido);
+        errorCantidad();
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
     carritoInterfaz(carrito);
     $('#botonFinalizarCompra').show();
-    notificacionAdd();
 }
 
 //--------------------------Funciones del carrito
 function carritoInterfaz(productos) {
-    $('#carritoCantidad').html(productos.length);
     $('#carritoProductos').empty();
     for (const producto of productos) {
         $('#carritoProductos').append(registroCarrito(producto));
     }
     $('.btnEliminar').on('click', eliminarCarrito);
-    $('.btn-add').click(addCantidad);
-    $('.btn-sub').click(subCantidad);
 }
 
 function registroCarrito(producto) {
     return `            <div class="productos-menu row mb-2">
-    
                                 <img class="img-carrito rounded" src="${producto.image}" alt="${producto.image}">
                                 <div class="ml-2">
                                     <p> ${producto.nombre}
@@ -93,8 +89,6 @@ function addCantidad() {
     agregarCantidad(1, producto);
     $(this).parent().children()[2].innerHTML = producto.cantidad;
     $(this).parents().children()[8].innerHTML = "$ " + subtotal(producto);
-
-    // $('#cuentaProductos').children()[0].innerHTML = totales();
     localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
@@ -105,20 +99,10 @@ function subCantidad() {
         agregarCantidad(-1, producto);
         $(this).parent().children()[2].innerHTML = producto.cantidad;
         $(this).parents().children()[8].innerHTML = "$ " + subtotal(producto);
-        
-        // $('#cuentaProductos').children()[0].innerHTML = totales();
         localStorage.setItem("carrito", JSON.stringify(carrito));
         
     }
 }
-//---------------------Filtros de busqueda
-$("#busquedaProducto").keypress(function (e) { 
-    const criterio = this.value.toUpperCase();
-    if (criterio != ""){
-        const encontrados = catalogo.filter(p => p.nombre.includes(criterio))
-        productosUI(encontrados, '#article')
-    }
-});
 
 //----------------------Notificaciones
 function notificacionAdd() {
@@ -150,6 +134,17 @@ function seleccionProducto(e) {
         "showDuration": "3",
         "hideDuration": "1",
         "timeOut": "3000",
+        "positionClass": "toast-top-center",
+    });
+}
+
+function errorCantidad(e) {
+    toastr.warning('Las cantidades las elige al finalizar la compra', 'Ya se ha añadido el producto al carrito', {
+        "closeButton": true,
+        "progressBar": true,
+        "showDuration": "3",
+        "hideDuration": "1",
+        "timeOut": "5000",
         "positionClass": "toast-top-center",
     });
 }

@@ -220,3 +220,19 @@ $width: (
     overflow-y: auto;
     overflow-x: hidden;
 }
+//------------------------------Filtros-Catalogo---------------------------
+.container-titulos-catalogo{
+    .title-stock{
+        margin-top: 3vh;
+           font-size: 6vh;
+           color: $white;
+    }
+    .btn-panel{
+         margin-top: 3.5vh;
+         margin-left: 5vh;
+         text-align: center;
+    }
+    .click{
+        cursor: pointer;
+    }
+}

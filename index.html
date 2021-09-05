@@ -9,8 +9,6 @@
 		<meta name="keywords" content="SHOES+, ZAPATILLAS,  CALZADO, DEPORTIVAS, TRAINING, RUNNING">
 
 		<link rel="shortcut icon" href="images/svg/icono.ico">
-		<link rel="stylesheet" href="css/animate.css">
-		<script src="js/wow.min.js"></script>
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css">
@@ -37,14 +35,6 @@
 				<a class="nav-link admin" href="pages/cuenta.html">Admin</a>
 			</li>
 		</ul>
-
-
-		<div>
-		  	<form class="form-inline mx-0 mx-md-0">
-				<input class="form-control mr-sm-2" type="search" placeholder="buscar" aria-label="Search">
-				<button class="btn btn-outline-mod my-2 my-sm-0" type="submit">Buscar</button>
-			</form>
-		</div>
 	</div>
 	
 	<!-- Button trigger modal -->
@@ -88,13 +78,18 @@
 </header>
 <!------------------------------------------CARRITO--------------------------------------------------->
 <div id="sidebar" class="active">
+    <hr>
+    
     <div class="toggle-btn">
-        <span><img src="images/svg/carrito-2.0.svg" alt="img-carrito" class="fondo-btn-carro"></span>
+        <span><img src="../images/svg/carrito-2.0.svg" alt="img-carrito" class="fondo-btn-carro"></span>
     </div>
     <div id="carritoProductos">
         <!--Archivos JS-->
     </div>
-        <a id="botonFinalizarCompra" class="btn btn-outline-mod w-100" href="pages/finalizarCompra.html">FINALIZAR COMPRA</a>
+    <div class="footerCarrito">
+        <a id="botonFinalizarCompra" class="btn btn-outline-mod" href="finalizarCompra.html">FINALIZAR
+            COMPRA</a>
+    </div>
 </div>
 <!------------------------------------------------------------------------------------------------------->
 <main>
@@ -151,11 +146,11 @@
 					</li>
 				</ul>
 			</div>
-			<form class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
+			<form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
 				<label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
 					<div class="form-inline footer__form">
-					  		<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4">
-							<button type="submit" class="btn btn-outline-mod ml-1">SUSCRIBIRSE</button>
+					  		<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
+							<input type="submit" class="btn btn-outline-mod ml-1"></input>
 				</div>
 			</form>
 			<div class="col-lg-4 col-md-6">
@@ -181,9 +176,11 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 		<!--ARCHIVOS JS PARA NOTIFICACIONES-->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 		<script src="js/global.js"></script>
 		<script src="js/class.js"></script>
 		<script src="js/function.js"></script>
 		<script src="js/main.js"></script>
+        <script src="js/forms.js"></script>
 	</body>
 </html>
