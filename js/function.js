@@ -16,6 +16,8 @@ function productosUI(productos, id) {
                                                        </article>
                                                        `);
     }
+    $('.btn_carrito').click(comprarProducto);
+    $('.btn-compra').click(seleccionProducto);
 }
 
 //--------------------Compra del producto
@@ -26,7 +28,8 @@ function comprarProducto(e) {
     if (añadido == undefined) {
         carrito.push(catalogo.find(p => p.id == idProducto));
         notificacionAdd();
-    } else {
+    }
+    else{
         errorCantidad();
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
@@ -147,4 +150,4 @@ function errorCantidad(e) {
         "timeOut": "5000",
         "positionClass": "toast-top-center",
     });
-}
+};

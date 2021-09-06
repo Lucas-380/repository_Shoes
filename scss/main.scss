@@ -48,7 +48,7 @@ body {
   font-family: "Permanent Marker", cursive;
   font-size: 5rem;
   line-height: 3rem;
-  margin: 8vh 0vh 2.5vh 0vh;
+  margin: 15vh 0vh 2.5vh 0vh;
   text-align: center;
   color: $white;
   display: block-inline;
@@ -173,6 +173,7 @@ $width: (
     background: rgba(19, 19, 19, 0.952); ;
     right: 0;
     transition: all 500ms linear;
+    top: 12vh;
     .img-carrito {
       margin-left: 1.5em;
       width: 80px;

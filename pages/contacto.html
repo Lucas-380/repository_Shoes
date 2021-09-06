@@ -85,6 +85,7 @@
     <!-- cierra nav -->
     <!------------------------------------------CARRITO--------------------------------------------------->
     <div id="sidebar" class="active">
+        <hr>
         <div class="toggle-btn">
             <span><img src="../images/svg/carrito-2.0.svg" alt="img-carrito" class="fondo-btn-carro"></span>
         </div>
@@ -94,7 +95,7 @@
         <a id="botonFinalizarCompra" class="btn btn-outline-mod" href="finalizarCompra.html">FINALIZAR COMPRA</a>
     </div>
     <!------------------------------------------------------------------------------------------------------->
-    <main>
+    <main class="marginTop">
         <div class="container-fluid row justify-content-center">
 
             <form id="formContacto" class="col-12 col-lg-6 col-md-6 bg-form" action="#" method="post">
@@ -164,12 +165,15 @@
                 </ul>
             </div>
             <form id="formNewsletter" class="col-lg-4 col-md-6 footer__separador" action="#" method="#">
-				<label class="footer__form" for="inputEmail4"><h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3></label>
-					<div class="form-inline footer__form">
-					  		<input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4" required>
-							<input type="submit" class="btn btn-outline-mod ml-1"></input>
-				</div>
-			</form>
+                <label class="footer__form" for="inputEmail4">
+                    <h3 class="title__form">SUSCRIBITE A NUESTRO NEWSLETTER</h3>
+                </label>
+                <div class="form-inline footer__form">
+                    <input type="email" placeholder="Ingresá tu email acá" class="form-control" id="inputEmail4"
+                        required>
+                    <input type="submit" class="btn btn-outline-mod ml-1"></input>
+                </div>
+            </form>
             <div class="col-lg-4 col-md-6">
                 <p class="my-2 footer__text">COMPRA 100% SEGURA</p>
                 <p class="my-2 footer__text">NUESTRO SITIO POSEE TODA LA SEGURIDAD PARA TU COMPRA.</p>
@@ -206,6 +210,7 @@
     <script src="../js/function.js"></script>
     <script src="../js/main.js"></script>
     <script src="../js/forms.js"></script>
+    <script src="../js/panelAdmin.js"></script>
 </body>
 
 </html>

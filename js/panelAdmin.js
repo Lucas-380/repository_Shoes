@@ -2,20 +2,8 @@ $(document).ready(function () {
     if ('nuevosProductos' in localStorage) {
         productosRegistrados = JSON.parse(localStorage.getItem("nuevosProductos"));
     }
-    $('.b-delete').click(ocultarProducto);
 });
 
-const URLGET = "../DATA.json";
-$.get(URLGET, function (datos, estado) {
-    if (estado == "success") {
-        for (const literal of datos) {
-            catalogo.push(new Zapatilla(literal.id, literal.nombre, literal.precio, literal.image));
-        }
-    } else {
-        console.log("ERROR");
-    }
-    lista(catalogo);
-})
 
 $('#registroProductos').submit(function () {
     const inputs = $('#registroProductos').children();
@@ -36,3 +24,15 @@ function lista(catalogo) {
                                                        `)
     }
 }
+
+//---------------------Filtros de busqueda
+$("#filtroAdmin").keyup(function (e) { 
+    $('#listaProductos').empty();
+    const criterio = this.value.toUpperCase();
+    if (criterio != ""){
+        const encontrados = catalogo.filter(p => p.nombre.includes(criterio));
+        lista(encontrados, '#listaProductos')
+    }else{
+        lista(catalogo, '#listaProductos');
+    }
+});
