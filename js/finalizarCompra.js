@@ -103,7 +103,7 @@ function registroCarritoVacio() {
     $("#cuentaProductos").empty();
     $("#cuentaProductos").append(
         `<div class="cuentas">
-               <h2>Vuelva a agregar Productos al carrito</h2>
+               <h5 class="main__title">Vuelva a agregar Productos al carrito</h5>
           </div>`
     );
 }
@@ -114,7 +114,7 @@ function confirmarCompra(e) {
         console.log(datos);
         console.log(estado);
     });
-    carrito = carrito.filter((producto) => producto.id != e.target.id);
+    carrito = [];
     compraUI(carrito);
     localStorage.setItem("carrito", JSON.stringify(carrito));
     registroCarritoVacio();

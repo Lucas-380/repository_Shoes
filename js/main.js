@@ -26,6 +26,7 @@ $(document).ready(function () {
 });
 window.addEventListener('load', () => {
     $('#carouselExampleIndicators').slideDown();
+    $('#titles').slideDown();
 })
 
 
@@ -44,7 +45,7 @@ $("#busquedaProducto").keyup(function (e) {
 $('.inputPrecio').change(function (e) {
     const min = $('#minProducto').val();
     const max = $('#maxProducto').val();
-    if ((min > 0) && (max > 0)) {
+    if ((min >= 0) && (max >= 0)) {
         const encontrados = catalogo.filter(p => p.precio >= min && p.precio <= max);
         productosUI(encontrados, '#article');
     } else {
@@ -65,4 +66,3 @@ $('#title').animate({
     opacity: '1'
 }, duracion2s).delay(5000).slideUp();
 
-$('#titles').slideDown();
